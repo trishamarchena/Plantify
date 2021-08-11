@@ -35,6 +35,8 @@ Plantify is a full stack app that allows a user to keep track of their plant car
 
 ## Wireframes
 
+https://www.figma.com/file/GOn7Nulfbz633ORZtxXLuH/Plantify?node-id=0%3A1
+
 ## ERD Model
 
 https://app.diagrams.net/#G1W-uraqDesdx5lJjyDIxXPqSXLxiZfyqV
