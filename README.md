@@ -45,6 +45,7 @@ https://whimsical.com/plantify-7VAX3weBjLhFW5RVNLtB4c
 
 
 ## Component Architecture
+![Screen Shot 2021-08-11 at 17 32 19](https://user-images.githubusercontent.com/84581353/129106338-edce7052-773c-4bf6-ae87-cc8a1018ccfc.png)
 
 src
 |__ assets/
