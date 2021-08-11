@@ -11,8 +11,8 @@ Plantify is a full stack app that allows a user to keep track of their plant car
   - Render data using functional React components
   - Utilize React Router for client side routing
   - Full CRUD functionality 
-  - Users submit a new plant
-  - Users can log their plant care
+  - Users  can submit a new plant
+  - Users can log their plant care by editing when they've watered it and if they've fertilized their plant.
   - Users can edit the plants they added
   - Users can delete their plants
 
