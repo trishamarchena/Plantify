@@ -39,7 +39,7 @@ https://www.figma.com/file/GOn7Nulfbz633ORZtxXLuH/Plantify?node-id=0%3A1
 
 ## ERD Model
 
-https://app.diagrams.net/#G1W-uraqDesdx5lJjyDIxXPqSXLxiZfyqV
+https://drive.google.com/file/d/1W-uraqDesdx5lJjyDIxXPqSXLxiZfyqV/view?usp=sharing
 ## Component Hierarchy
 https://whimsical.com/plantify-7VAX3weBjLhFW5RVNLtB4c
 
