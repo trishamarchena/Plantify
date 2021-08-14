@@ -4,7 +4,7 @@ class CreatePlantCares < ActiveRecord::Migration[6.1]
       t.references :user, null: false, foreign_key: true
       t.references :plant, null: false, foreign_key: true
       t.date :date_edit
-      t.string :notes
+      t.text :notes
       t.date :date_acq
 
       t.timestamps

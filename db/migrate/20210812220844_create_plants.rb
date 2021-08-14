@@ -5,7 +5,7 @@ class CreatePlants < ActiveRecord::Migration[6.1]
       t.references :user, null: false, foreign_key: true
       t.string :watering_input
       t.string :sunlight_input
-      t.string :other_input
+      t.text :other_input
       t.string :image_url
 
       t.timestamps
