@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+
   before_action :authorize_request, only: [:verify]
 
+  # POST /users
   def create
     user = User.new(user_register_params)
     if user.save
@@ -13,8 +15,8 @@ class UsersController < ApplicationController
       render json: user.errors, status: 422
     end
   end
-
-  # CUSTOM METHODS
+  
+    # CUSTOM METHODS
   # POST /users/login
   def login
     user = User.find_by(email: user_login_params[:email])
@@ -35,7 +37,9 @@ class UsersController < ApplicationController
     render json: @current_user.attributes.except("password_digest"), status: :ok
   end
 
+
   private
+
   def user_register_params
     params.require(:user).permit(:username, :email, :password)
   end
@@ -44,8 +48,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :password)
   end
 
-  def create_token(user_id)
-    payload = {id: user_id, exp: 24.hours.from_now.to_i}
+  def create_token(id)
+    payload = {id: id, exp: 24.hours.from_now.to_i}
     JWT.encode(payload, SECRET_KEY)
   end
 end
