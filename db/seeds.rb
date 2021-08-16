@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Plant.destroy_all
 PlantCare.destroy_all
+Plant.destroy_all
+User.destroy_all
 
-user = User.create!( username: 'trisha1', email: 'trishamarchena@gmail.com', password_digest: 'trisha123')
+user = User.create!( username: 'trisha1', email: 'trishamarchena@gmail.com', password: 'trisha123')
 pp "#{User.count} users created "
 
 plant = Plant.create!(name: 'Monstera Deliciosa', user_id: user[:id], watering_input: 'Water every 1-2 weeks, allowing soil to dry out between waterings. Expect to water more often in brighter light and less often in lower light. Pro tip: Monsteras can benefit from filtered water or water left out overnight before using. ', sunlight_input: 'Thrives in bright to medium indirect light. Not suited for intense, direct sun but can be acclimated to withstand it.', other_input: 'something special about the plant', image_url: 'https://m.media-amazon.com/images/I/712J0qb2juL._AC_SX466_.jpg')
