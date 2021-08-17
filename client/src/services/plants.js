@@ -19,7 +19,7 @@ export const createPlant = async (plantData) => {
   return res.data
 }
 
-export const updatePlant = async (plantData, plantID) => {
+export const updatePlant = async (plantID,plantData ) => {
   const res = await api.put(`/plants/${plantID}`, { plant: plantData })
   return res.data
 }

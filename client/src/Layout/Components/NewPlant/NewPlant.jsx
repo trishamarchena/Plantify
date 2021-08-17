@@ -21,7 +21,6 @@ export default function CreatePlant({user}) {
       [name]: value,
       user_id: user?.id
     })
-    console.log(formData)
   }
 
   const handleSubmit = async (e) => {

@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
   end
 
   def show
-    render json: @plant
+    render json: @plant, include: :plant_cares
   end
 
   def create

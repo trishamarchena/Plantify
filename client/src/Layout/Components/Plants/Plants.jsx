@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getAllPlants, deletePlant } from "../../../services/plants.js";
+import { getAllPlants } from "../../../services/plants.js";
 import "./Plants.css";
 
 export default function Plants({ user }) {
@@ -14,12 +14,7 @@ export default function Plants({ user }) {
     fetchPlants();
   }, []);
 
-  const handleDelete = async (plantID) => {
-    await deletePlant(plantID);
-    setPlants((prevPlants) =>
-      prevPlants.filter((plant) => plant.id !== plantID)
-    );
-  };
+  
 
   return (
     <section className="screen-section">
@@ -31,22 +26,13 @@ export default function Plants({ user }) {
               <Link to={`/plants/${plant.id}`} className="plant-list-name">
                 <p>{plant.name}</p>
               </Link>
-              <Link to={`/plants/${plant.id}/edit`}>
-                <button className="plant-list-edit">edit</button>
-              </Link>
-              <button
-                onClick={() => handleDelete(plant.id)}
-                className="plant-list-delete"
-              >
-                delete
-              </button>
             </Fragment>
           );
         })}
       </div>
-      <Link to="/create-plant">
+      {/* <Link to="/create-plant">
         <button>Add Plant</button>
-      </Link>
+      </Link> */}
     </section>
   );
 }
