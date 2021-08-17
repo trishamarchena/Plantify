@@ -19,8 +19,6 @@ export const login = async (userData) => {
     return res.data.user
   }
 }
-
-
 export const verify = async () => {
   const token = localStorage.getItem('authToken')
   if (token) {
@@ -29,10 +27,8 @@ export const verify = async () => {
     return res.data
   }
 }
-
 export const logout = () => {
   localStorage.removeItem("authToken")
   api.defaults.headers.common.authorization = null
-
 }
 

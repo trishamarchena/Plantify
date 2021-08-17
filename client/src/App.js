@@ -4,6 +4,10 @@ import { Route, useHistory } from 'react-router-dom';
 import Homepage from './Layout/Homepage/Homepage.jsx';
 import Register from './Layout/Components/Register/Register.jsx';
 import SignIn from './Layout/Components/SignIn/SignIn.jsx';
+import Plants from './Layout/Components/Plants/Plants.jsx';
+import EditPlant from './Layout/Components/EditPlant/EditPlants';
+import PlantsDetail from './Layout/Components/PlantsDetail/PlantsDetail.jsx';
+import NewPlant from './Layout/Components/NewPlant/NewPlant.jsx';
 
 
 function App() {
@@ -61,6 +65,10 @@ function App() {
             registerFormData={registerFormData}
           />
         </Route>
+        <Route exact path ="/plants"><Plants/></Route>
+        <Route exact path ="/plants/:id/edit"><EditPlant/></Route>
+        <Route exact path ="/plants/:id"><PlantsDetail/></Route>
+        <Route exact path ="/create-plant"><NewPlant user={user} /></Route>
         <Route exact path="/SignIn">
           <SignIn
             handleLogin={handleLogin}

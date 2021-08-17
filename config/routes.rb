@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "/users/verify", to: "users#verify"
   post "/users/login", to: "users#login"
   put "/plants/:id/add_plant_care_to_plant", to: "plants#add_plant_care_to_plant"
-  resources :user
+  resources :users
   resources :plants
   resources :plant_cares
 end

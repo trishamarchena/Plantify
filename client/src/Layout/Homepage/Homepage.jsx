@@ -35,7 +35,7 @@ const Homepage = (props) => {
       <hr />
       <div className="nav-links">
         <Link to="/plants">Plants</Link>
-        <Link to="/plant_cares">PLant care</Link>
+        <Link to="/plant_cares">Plant Care</Link>
       </div>
       <hr />
       {props.children}
