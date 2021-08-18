@@ -4,6 +4,7 @@
   flex-direction: column;
   align-content: center;
   text-align: center;
+  height: 100vh;
 }
 .addPlantHeader{
   text-align: center;
@@ -20,4 +21,13 @@
 width: 200px;
 height: 50px;
 margin: 10px;
+}
+
+@media screen and (max-width: 680px) {
+  .newPlantInput{
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    font-size: x-large;
+  }
 }
