@@ -6,26 +6,30 @@
   width: 100vw;
   
 }
-/* nav {
+
+.navButtons{
   display: flex;
-  align-items: center;
-  min-height: 40px;
-  height: 7vh;
-  width: 100%;
-  top: 0;
-  position: fixed;
-} */
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px;
+}
+.linkup{
+  color:black;
+}
 
 .nav-links-container{
 display: flex;
 flex-direction: column;
 align-items:flex-end;
-justify-content: flex-end;
+justify-content: flex-start;
+align-content: flex-start;
 }
 .nav-items{
   display:flex;
   justify-content: center;
-  align-items: center;
+  
+  /* align-items: flex-start; */
+  text-align: left;
 }
 .nav-header{
   text-align: center;

@@ -5,9 +5,9 @@ import {
   updatePlant,
   deletePlant,
 } from "../../../services/plants";
+import "./EditPlant.css";
 
 export default function EditPlant({ user }) {
- 
   const [formData, setFormData] = useState({
     name: "",
     user_id: user?.id,
@@ -32,10 +32,10 @@ export default function EditPlant({ user }) {
   }, [id]);
 
   const handleChange = (e) => {
-    const { name,value } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-     [name]: value,
+      [name]: value,
       user_id: user?.id,
     });
   };
@@ -51,54 +51,64 @@ export default function EditPlant({ user }) {
     history.push("/plants");
   };
   return (
-    <div>
-      <h1>Edit Plant</h1>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="name">name:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          id="name"
-          name="name"
-          type="text"
-          value={formData.name}
-        />
-        <label htmlFor="watering_input_edit_plant">watering input:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          id="watering_input_edit_plant"
-          name="watering_input"
-          type="text"
-          value={formData.watering_input}
-        />
-        <label htmlFor="sunlight_input_edit_plant">sunlight input:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          id="sunlight_input_edit_plant"
-          name="sunlight_input"
-          type="text"
-          value={formData.sunlight_input}
-        />
-        <label htmlFor="other_input_edit_plant">onther input:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          id="other_input_edit_plant"
-          name="other_input"
-          type="text"
-          value={formData.other_input}
-        />
-        <label htmlFor="image_url_edit_plant">image input:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          id="image_url_edit_plant"
-          name="image_url"
-          type="text"
-          value={formData.image_url}
-        />
-        <button type="submit">Submit</button>
-        <button onClick={(e) => handleDelete(e)} className="plant-list-delete">
-          delete
-        </button>
-      </form>
+    <div className="editPlantContainer">
+      <div className="editPlantHeaderContainer">
+        <h1 className="editPlantHeader">Edit Plant</h1>
+      </div>
+      <div>
+        <form className="editPlantForm" onSubmit={(e) => handleSubmit(e)}>
+          <label htmlFor="name">Name</label>
+          <input className="editPlantInput"
+            onChange={(e) => handleChange(e)}
+            id="name"
+            name="name"
+            type="text"
+            value={formData.name}
+          />
+          <label className="editPlantInput" htmlFor="watering_input_edit_plant">Water</label>
+          <input
+            className="editPlantInput"
+            onChange={(e) => handleChange(e)}
+            id="watering_input_edit_plant"
+            name="watering_input"
+            type="text"
+            value={formData.watering_input}
+          />
+          <label className="editPlantInput" htmlFor="sunlight_input_edit_plant">
+            Sunlight
+          </label>
+          <input className="editPlantInput"
+            onChange={(e) => handleChange(e)}
+            id="sunlight_input_edit_plant"
+            name="sunlight_input"
+            type="text"
+            value={formData.sunlight_input}
+          />
+          <label htmlFor="other_input_edit_plant">Other</label>
+          <input className="editPlantInput"
+            onChange={(e) => handleChange(e)}
+            id="other_input_edit_plant"
+            name="other_input"
+            type="text"
+            value={formData.other_input}
+          />
+          <label htmlFor="image_url_edit_plant">Image</label>
+          <input className="editPlantInput"
+            onChange={(e) => handleChange(e)}
+            id="image_url_edit_plant"
+            name="image_url"
+            type="text"
+            value={formData.image_url}
+          />
+          <button type="submit">Submit</button>
+          <button
+            onClick={(e) => handleDelete(e)}
+            className="plant-list-delete"
+          >
+            delete
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

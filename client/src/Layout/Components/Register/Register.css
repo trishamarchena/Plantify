@@ -1,0 +1,21 @@
+.registerInput{
+  width: 250px;
+}
+.registerContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100vh;
+}
+.registerForm{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.registerHeader{
+  text-align: center;
+  color:#FF00A8;
+}

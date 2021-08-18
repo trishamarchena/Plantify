@@ -6,8 +6,6 @@ const Navbar = ({ user, handleLogout, children }) => {
   // const [visible, setVisible] = useState(true);
   // const history = useHistory();
 
-  
-
   const authenticated = (
     <div className="authenticatedUser_logout">
       <div className="usernameDisplay">
@@ -25,32 +23,34 @@ const Navbar = ({ user, handleLogout, children }) => {
     </div>
   );
   const unauthenticated = (
-    <>
-      <Link to="/login">Sign In </Link>
-      <Link to="/Register">Register!</Link>
-    </>
+    <div className="navButtons">
+      <Link className="linkup" to="/login">Sign In </Link>
+      <Link className="linkup" to="/Register">Register!</Link>
+    </div>
   );
 
   return (
-      <nav className="navbar">
-        <div className="navItems">
-          <header className="nav-header">
-            <Link to="/">
+    <nav className="navbar">
+      <div className="navItems">
+        <header className="nav-header">
+          <Link to="/">
             <h1 id="mytitle">Plantify</h1>
-            </Link>
-          </header>
-          <div className= "nav-links-container">
-            {user ? authenticated : unauthenticated}
-          <div className="plant-links">
-            <Link to="/plants">Plants</Link>
+          </Link>
+        </header>
+        <div className="nav-links-container">
+          {user ? authenticated : unauthenticated}
+          <div className="navButtons">
+            <div className="plant-links">
+              <Link className="linkup" to="/plants">Plants</Link>
+            </div>
+            <div className="addplantButton">
+              <Link className="linkup" to="/create-plant">Add Plant</Link>
+            </div>
           </div>
-          <div className="addplantButton">
-            <Link to="/create-plant">add Plant</Link>
-          </div>
-          </div>
-          {children}
         </div>
-      </nav>
+        {children}
+      </div>
+    </nav>
   );
 };
 

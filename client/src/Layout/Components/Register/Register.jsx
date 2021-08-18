@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Register.css"
 
 export default function Register({handleRegister, setRegisterFormData, registerFormData}) {
 
@@ -15,26 +16,26 @@ export default function Register({handleRegister, setRegisterFormData, registerF
 
 
   return (
-    <div>
-      <h1>Register</h1>
-      <div className = "register">
-      <form onSubmit={(e) => handleRegister(e)}>
+    <div className="registerContainer">
+      <h1 className="registerHeader">Register</h1>
+      
+      <form className="registerForm"onSubmit={(e) => handleRegister(e)}>
         <label htmlFor="">username</label>
-        <input
+        <input className="registerInput"
           onChange={(e) => handleChange(e)}
           type="text"
           name="username"
           value={registerFormData.username}
         />
         <label htmlFor="">email</label>
-        <input
+        <input className="registerInput"
           onChange={(e) => handleChange(e)}
           type="text"
           name="email"
           value={registerFormData.email}
         />
         <label htmlFor="">password</label>
-        <input
+        <input className="registerInput"
           onChange={(e) => handleChange(e)}
           type="password"
           name="password"
@@ -43,6 +44,5 @@ export default function Register({handleRegister, setRegisterFormData, registerF
         <button type="submit">Submit</button>
       </form>
       </div>
-    </div>
   )
 }

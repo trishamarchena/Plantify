@@ -5,9 +5,9 @@ const Layout = (props) => {
   return (
     <div className="layout">
       <Navbar user={props.user} handleLogout={props.handleLogout}/>
-      <Footer />
       <div className ="layoutChildren">
       {props.children}
+      <Footer />
     </div>
     </div>
   );

@@ -61,11 +61,11 @@ export default function PlantDetail() {
           <Link to={`/plants/${plant.id}/edit`}>
             <button className="plant-detail-edit-button">edit</button>
           </Link>
-          <Link to={`plants/${plant.id}/plant_cares`}>
+          {/* <Link to={`plants/${plant.id}/plant_cares`}>
             <button className="plant-detail-submit-button" type="submit">
               Plant Care
             </button>
-          </Link>
+          </Link> */}
         </div>
       </form>
     </section>

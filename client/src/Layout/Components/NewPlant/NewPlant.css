@@ -7,10 +7,17 @@
 }
 .addPlantHeader{
   text-align: center;
+  color:#FF00A8;
+  
 }
 .newPlantForm{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.newPlantInput{
+width: 200px;
+height: 50px;
+margin: 10px;
 }
