@@ -1,0 +1,26 @@
+.detailName{
+  display: flex;
+  align-self: center;
+}
+.detailedButtons{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: white;
+  font-family: 'roboto mono', sans-serif;
+}
+
+.detail-section{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: 'roboto mono', sans-serif;
+}
+.detailImage{  
+  width: 400px;
+  height: 450px;
+  margin: auto;
+  max-height: 90%;
+  object-fit: contain;
+}

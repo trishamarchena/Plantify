@@ -1,0 +1,8 @@
+footer{
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  font-family: 'roboto mono', sans-serif;
+  /* z-index: 2; */
+}

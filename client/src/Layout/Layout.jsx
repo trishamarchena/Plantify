@@ -1,9 +1,16 @@
-import Navbar from '/Navbar/Navbar.jsx';
+import Navbar from "./Navbar/Navbar.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
 
-const Layout = () {
+const Layout = (props) => {
+  return (
+    <div className="layoutDiv">
+      <Navbar user={props.user} handleLogout={props.handleLogout}/>
+      <Footer />
+      <div>
+      {props.children}
+    </div>
+    </div>
+  );
+};
 
-  return(
-    <Navbar />
-
-  )
-}
+export default Layout;

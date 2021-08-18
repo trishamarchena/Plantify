@@ -1,13 +1,10 @@
-import { Route } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
-import Plants from './Components/Plants/Plants.jsx'
-// import CreateFood from '../screens/CreateFood'
-// import EditFood from "../screens/EditFood"
-// import Flavors from "../screens/Flavors"
-// import FoodDetail from "../screens/FoodDetail"
-
-const Navbar = ({user}) => {
+const Navbar = ({ user, props }) => {
   const [visible, setVisible] = useState(true);
+  const history = useHistory();
   // is the hamburger menu open?
   const [hamburger, setHamburger] = useState(false);
 
@@ -29,12 +26,33 @@ const Navbar = ({user}) => {
     };
   }, []);
 
+  const authenticated = (
+    <div className="authenticatedUser_logout">
+      <div className="usernameDisplay">
+        <p>{user?.username}</p>
+      </div>
+      <div className="logoutDisplay">
+        <button
+          onClick={(e) => {
+            props.handleLogout(e);
+          }}
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  );
+  const unauthenticated = (
+    <>
+      <Link to="/login">Sign In </Link>
+      <Link to="/Register">Register!</Link>
+    </>
+  );
+
   return (
     <nav className={hamburger ? "active" : null}>
-      <div className="navbar">
-        <div className="welcome">
-          <Link to="/">SPF</Link>
-        </div>
+      <nav className="navbar">
+        <div className="welcome"></div>
         <div id="hamburger-div">
           {hamburger ? (
             <div id="close-hamburger" onClick={() => setHamburger(!hamburger)}>
@@ -52,30 +70,24 @@ const Navbar = ({user}) => {
           className="links"
           style={{ display: visible || hamburger ? "flex" : "none" }}
         ></div>
-    <div>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/plants">
-        <Plants user={user} />
-      </Route>
-      <Route exact path="/plant/:id">
-        <PlantDetail/>
-      </Route>
-      <Route exact path="/create-plant">
-        <CreatePlant user={user}/>
-      </Route>
-      <Route exact path="/plant/:id/edit">
-        <Plant user={user}/>
-      </Route>
-      <Route exact path="/plant_care">
-        <Plant_Care/>
-      </Route>
-    </div>
-    </div>
-    
+        <div>
+          <header className="layout-header">
+            <h1>Plantify</h1>
+            {user ? authenticated : unauthenticated}
+          </header>
+          <hr />
+          <div className="plant-links">
+            <Link to="/plants">Plants</Link>
+          </div>
+          <div className="addplantButton">
+            <Link to="/create-plant">add Plant</Link>
+          </div>
+          <hr />
+          {props?.children}
+        </div>
+      </nav>
     </nav>
-  )
-          }
+  );
+};
 
 export default Navbar;
