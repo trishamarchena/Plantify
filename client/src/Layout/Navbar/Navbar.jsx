@@ -14,13 +14,13 @@ const Navbar = ({ user, handleLogout, children }) => {
         <p>{user?.username}</p>
       </div>
       <div className="logoutDisplay">
-        <button
+        <Link
           onClick={() => {
             handleLogout();
           }}
         >
           Logout
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -36,11 +36,11 @@ const Navbar = ({ user, handleLogout, children }) => {
         <div className="navItems">
           <header className="nav-header">
             <Link to="/">
-            <h1>Plantify</h1>
+            <h1 id="mytitle">Plantify</h1>
             </Link>
-            {user ? authenticated : unauthenticated}
           </header>
           <div className= "nav-links-container">
+            {user ? authenticated : unauthenticated}
           <div className="plant-links">
             <Link to="/plants">Plants</Link>
           </div>

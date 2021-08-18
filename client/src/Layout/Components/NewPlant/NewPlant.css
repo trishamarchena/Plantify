@@ -1,0 +1,16 @@
+.newPlantContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+.addPlantHeader{
+  text-align: center;
+}
+.newPlantForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

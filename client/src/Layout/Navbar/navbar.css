@@ -1,11 +1,10 @@
 .navbar{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-bottom: 2px solid black;
-  height: 20vh;
-  width: 80%;
-  margin: 0 auto;
-
+  /* height: 20vh; */
+  width: 100vw;
+  
 }
 /* nav {
   display: flex;
@@ -20,10 +19,19 @@
 .nav-links-container{
 display: flex;
 flex-direction: column;
-justify-content: right;
+align-items:flex-end;
+justify-content: flex-end;
 }
-/* #root{
-  display: flex;
+.nav-items{
+  display:flex;
   justify-content: center;
-
-} */
+  align-items: center;
+}
+.nav-header{
+  text-align: center;
+  font-family: Spartan, sans-serif;
+  font-size: large;
+}
+#mytitle{
+  color: #3D9E10;
+}

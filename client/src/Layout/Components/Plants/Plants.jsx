@@ -18,14 +18,14 @@ export default function Plants({ user }) {
 
   return (
     <section className="allThePlants">
-      <h1>Plants</h1>
+      <h1 className="plantsheader">All my greens</h1>
       <div className="plant-list">
         {plants.map((plant) => {
           return (
             <Fragment key={plant.id}>
               <Link to={`/plants/${plant.id}`} className="plant-list-name">
-              <div className="plantImages">
-        <img src={plant.image_url} alt={plant.name} />
+              <div className="plantImagesContainers">
+        <img className="plantImages" src={plant.image_url} alt={plant.name} />
       </div>
                 <p>{plant.name}</p>
               </Link>
@@ -33,9 +33,6 @@ export default function Plants({ user }) {
           );
         })}
       </div>
-      {/* <Link to="/create-plant">
-        <button>Add Plant</button>
-      </Link> */}
     </section>
   );
 }
