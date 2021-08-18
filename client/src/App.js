@@ -57,7 +57,6 @@ function App() {
   return (
       <Switch>
         <Layout user ={user} handleLogout={handleLogout}>
-    <div className="navbar">
         <Route exact path="/">
           <Homepage user={user} handleLogout={handleLogout} />
         </Route>
@@ -87,7 +86,6 @@ function App() {
             loginFormData={loginFormData}
           />
         </Route>
-    </div>
     </Layout>
       </Switch>
   );

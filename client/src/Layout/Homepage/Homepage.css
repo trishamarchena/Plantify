@@ -1,5 +1,11 @@
 .description{
-  font-family: 'roboto mono', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+margin: 100px;
+margin-top: 200px;
+  width: 80vw;
+  border: 2px solid black;
 }
 button{
   background-color: transparent;

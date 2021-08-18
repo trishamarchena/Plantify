@@ -3,10 +3,10 @@ import Footer from "./Components/Footer/Footer.jsx";
 
 const Layout = (props) => {
   return (
-    <div className="layoutDiv">
+    <div className="layout">
       <Navbar user={props.user} handleLogout={props.handleLogout}/>
       <Footer />
-      <div>
+      <div className ="layoutChildren">
       {props.children}
     </div>
     </div>

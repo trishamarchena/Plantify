@@ -17,7 +17,7 @@ export default function Plants({ user }) {
   
 
   return (
-    <section className="allthePlants">
+    <section className="allThePlants">
       <h1>Plants</h1>
       <div className="plant-list">
         {plants.map((plant) => {

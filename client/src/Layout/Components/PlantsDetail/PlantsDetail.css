@@ -1,6 +1,16 @@
+.detail-section{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 100px auto;
+  width: 75vw;
+  padding: 5px;
+}
 .detailName{
   display: flex;
   align-self: center;
+  font-size: large;
 }
 .detailedButtons{
   display: flex;
@@ -10,13 +20,6 @@
   font-family: 'roboto mono', sans-serif;
 }
 
-.detail-section{
-  display: flex;
-  align-self: center;
-  text-align: center;
-  flex-direction: column;
-  font-family: 'roboto mono', sans-serif;
-}
 .detailImage{  
   width: 400px;
   height: 450px;

@@ -1,4 +1,3 @@
-import { Link, useHistory, Route } from "react-router-dom";
 import "./Homepage.css";
 
 const Homepage = (props) => {
