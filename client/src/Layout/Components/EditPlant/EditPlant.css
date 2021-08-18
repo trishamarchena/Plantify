@@ -2,7 +2,6 @@
 display: flex;
 justify-content: center;
 display: flex;
-justify-content: center;
 flex-direction: column;
 align-content: center;
 text-align: center;
@@ -22,7 +21,4 @@ text-align: center;
   height: 30px;
   width: 300px;
   margin: 5px;
-}
-placeholder{
-  text-align: center;
 }

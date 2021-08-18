@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const Navbar = ({ user, handleLogout, children }) => {
@@ -12,13 +11,13 @@ const Navbar = ({ user, handleLogout, children }) => {
         <p>{user?.username}</p>
       </div>
       <div className="logoutDisplay">
-        <Link
+        <span className="logoutButton"
           onClick={() => {
             handleLogout();
           }}
         >
           Logout
-        </Link>
+        </span>
       </div>
     </div>
   );
