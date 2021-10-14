@@ -18,7 +18,6 @@ export default function Register({handleRegister, setRegisterFormData, registerF
   return (
     <div className="registerContainer">
       <h1 className="registerHeader">Register</h1>
-      
       <form className="registerForm"onSubmit={(e) => handleRegister(e)}>
         <label htmlFor="">username</label>
         <input className="registerInput"
@@ -27,6 +26,7 @@ export default function Register({handleRegister, setRegisterFormData, registerF
           name="username"
           value={registerFormData.username}
         />
+
         <label htmlFor="">email</label>
         <input className="registerInput"
           onChange={(e) => handleChange(e)}
