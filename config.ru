@@ -7,11 +7,7 @@ Rails.application.load_server
 
 
 
-# config/initializers/datadog-tracer.rb
-Datadog.configure do |c|
-  c.env = 'envdd'
-  c.service = 'servicedd'
-end
+
 # # config/initializers/datadog.rb
 # require 'ddtrace'
 
