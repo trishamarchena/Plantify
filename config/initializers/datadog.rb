@@ -1,7 +1,7 @@
 require 'ddtrace'
 
 Datadog.configure do |c|
-  # This will activate auto-instrumentation for Rails
+  # This will activate auto-instrumentation for Rais
   c.use :rails, log_injection: true
   c.tracer sampler: Datadog::PrioritySampler.new(
     post_sampler: Datadog::Sampling::RuleSampler.new(
